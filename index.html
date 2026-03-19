@@ -63,7 +63,7 @@
     import { 
       Home, BookOpen, Award, History, ChevronRight, CheckCircle, 
       Clock, Star, Trophy, Lock, User, LogOut, AlertCircle, RefreshCw, 
-      X, Calendar, Volume2, Mic, Square, Trash2
+      X, Calendar, Volume2, Mic, Square, Trash2, ArrowRight
     } from 'lucide-react';
 
     // Firebase Imports
@@ -86,9 +86,7 @@
     // Database Mufrodat Berdasarkan Hari (1-30)
     const MUFRODAT_DB = {
       1: {
-        title: "Isi Rumah & Bangunan",
-        titleAr: "أَثَاثُ المَنْزِلِ",
-        data: [
+        title: "Isi Rumah & Bangunan", titleAr: "أَثَاثُ المَنْزِلِ", data: [
           { id: 1, arab: "سَرِيْرٌ", latin: "Sarirun", arti: "Kasur", contoh: "أَنَا أَنَامُ عَلَى السَّرِيْرِ", deskripsi: "Tempat untuk beristirahat dan tidur." },
           { id: 2, arab: "مِخَدَّةٌ", latin: "Mikhaddatun", arti: "Bantal", contoh: "الْمِخَدَّةُ نَاعِمَةٌ جِدًّا", deskripsi: "Alas kepala saat tidur agar nyaman." },
           { id: 3, arab: "خِزَانَةٌ", latin: "Khizanatun", arti: "Lemari", contoh: "أَضَعُ الْمَلَابِسَ فِي الْخِزَانَةِ", deskripsi: "Tempat menyimpan pakaian atau barang." },
@@ -102,9 +100,7 @@
         ]
       },
       2: {
-        title: "Peralatan Sekolah",
-        titleAr: "الأَدَوَاتُ المَدْرَسِيَّةُ",
-        data: [
+        title: "Peralatan Sekolah", titleAr: "الأَدَوَاتُ المَدْرَسِيَّةُ", data: [
           { id: 1, arab: "قَلَمٌ", latin: "Qalamun", arti: "Pena", contoh: "أَكْتُبُ بِالْقَلَمِ", deskripsi: "Alat tulis utama untuk belajar." },
           { id: 2, arab: "كِتَابٌ", latin: "Kitabun", arti: "Buku", contoh: "أَقْرَأُ الْكِتَابَ فِي الْمَكْتَبَةِ", deskripsi: "Sumber ilmu pengetahuan." },
           { id: 3, arab: "دَفْتَرٌ", latin: "Daftarun", arti: "Buku Tulis", contoh: "أَكْتُبُ الدَّرْسَ فِي الدَّفْتر", deskripsi: "Tempat mencatat penjelasan ustadz." },
@@ -118,9 +114,7 @@
         ]
       },
       3: {
-        title: "Buah & Makanan",
-        titleAr: "المَأْكُولَاتُ وَالفَوَاكِهُ",
-        data: [
+        title: "Buah & Makanan", titleAr: "المَأْكُولَاتُ وَالفَوَاكِهُ", data: [
           { id: 1, arab: "تُفَّاحٌ", latin: "Tuffahun", arti: "Apel", contoh: "آكُلُ التُّفَّاحَةَ الْحَمْرَاءَ", deskripsi: "Buah bulat yang rasanya manis." },
           { id: 2, arab: "مَوْزٌ", latin: "Mauzun", arti: "Pisang", contoh: "الْمَوْزُ لَوْنُهُ أَصْفَرُ", deskripsi: "Buah panjang berwarna kuning." },
           { id: 3, arab: "عِنَبٌ", latin: "Inabun", arti: "Anggur", contoh: "الْعِنَبُ لَذِيْذٌ جِدًّا", deskripsi: "Buah kecil yang tumbuh merambat." },
@@ -134,9 +128,7 @@
         ]
       },
       4: {
-        title: "Anggota Tubuh",
-        titleAr: "أَعْضَاءُ الجِسْمِ",
-        data: [
+        title: "Anggota Tubuh", titleAr: "أَعْضَاءُ الجِسْمِ", data: [
           { id: 1, arab: "رَأْسٌ", latin: "Ra'sun", arti: "Kepala", contoh: "هَذَا رَأْسٌ كَبِيْرٌ", deskripsi: "Bagian atas tubuh manusia." },
           { id: 2, arab: "شَعْرٌ", latin: "Sya'run", arti: "Rambut", contoh: "شَعْرِي لَوْنُهُ أَسْوَدُ", deskripsi: "Sesuatu yang tumbuh di atas kepala." },
           { id: 3, arab: "عَيْنٌ", latin: "Ainun", arti: "Mata", contoh: "أَنْظُرُ بِالْعَيْنِ", deskripsi: "Indra untuk melihat." },
@@ -150,9 +142,7 @@
         ]
       },
       5: {
-        title: "Warna",
-        titleAr: "الأَلْوَانُ",
-        data: [
+        title: "Warna", titleAr: "الأَلْوَانُ", data: [
           { id: 1, arab: "أَحْمَرُ", latin: "Ahmaru", arti: "Merah", contoh: "التُّفَّاحُ لَوْنُهُ أَحْمَرُ", deskripsi: "Warna seperti darah atau buah apel." },
           { id: 2, arab: "أَزْرَقُ", latin: "Azraqu", arti: "Biru", contoh: "السَّمَاءُ لَوْنُهَا أَزْرَقُ", deskripsi: "Warna seperti langit yang cerah." },
           { id: 3, arab: "أَخْضَرُ", latin: "Akhdharu", arti: "Hijau", contoh: "الْعُشْبُ لَوْنُهُ أَخْضَرُ", deskripsi: "Warna seperti daun atau rumput." },
@@ -166,9 +156,7 @@
         ]
       },
       6: {
-        title: "Profesi",
-        titleAr: "المِهَنُ",
-        data: [
+        title: "Profesi", titleAr: "المِهَنُ", data: [
           { id: 1, arab: "طَبِيْبٌ", latin: "Thabiibun", arti: "Dokter", contoh: "الطَّبِيْبُ يُعَالِجُ الْمَرْضَى", deskripsi: "Orang yang ahli dalam mengobati orang sakit." },
           { id: 2, arab: "مُدَرِّسٌ", latin: "Mudarrisun", arti: "Guru", contoh: "الْمُدَرِّسُ يَشْرَحُ الدَّرْسَ", deskripsi: "Orang yang mengajarkan ilmu di sekolah." },
           { id: 3, arab: "مُهَنْدِسٌ", latin: "Muhandisun", arti: "Insinyur", contoh: "الْمُهَنْدِسُ يَبْنِي الْبُيُوْتَ", deskripsi: "Orang yang ahli merancang bangunan." },
@@ -182,9 +170,7 @@
         ]
       },
       7: {
-        title: "Keluarga",
-        titleAr: "الأُسْرَةُ",
-        data: [
+        title: "Keluarga", titleAr: "الأُسْرَةُ", data: [
           { id: 1, arab: "أَبٌ", latin: "Abun", arti: "Ayah", contoh: "هَذَا أَبِي", deskripsi: "Kepala keluarga tersayang." },
           { id: 2, arab: "أُمٌّ", latin: "Ummun", arti: "Ibu", contoh: "أُمِّي طَبَّاخَةٌ مَاهِرَةٌ", deskripsi: "Sosok mulia yang mengasuh kita." },
           { id: 3, arab: "أَخٌ", latin: "Akhun", arti: "Saudara Laki-laki", contoh: "أَخِي يَلْعَبُ الْكُرَةَ", deskripsi: "Saudara kandung laki-laki." },
@@ -198,9 +184,7 @@
         ]
       },
       8: {
-        title: "Kata Tunjuk",
-        titleAr: "أَسْمَاءُ الإِشَارَةِ",
-        data: [
+        title: "Kata Tunjuk", titleAr: "أَسْمَاءُ الإِشَارَةِ", data: [
           { id: 1, arab: "هَذَا", latin: "Haadzaa", arti: "Ini (L)", contoh: "هَذَا كِتَابٌ جَدِيْدٌ", deskripsi: "Kata tunjuk jarak dekat untuk laki-laki/mudzakkar." },
           { id: 2, arab: "هَذِهِ", latin: "Haadzihi", arti: "Ini (P)", contoh: "هَذِهِ حَقِيْبَةٌ جَمِيْلَةٌ", deskripsi: "Kata tunjuk jarak dekat untuk perempuan/muannats." },
           { id: 3, arab: "ذَلِكَ", latin: "Dzaalika", arti: "Itu (L)", contoh: "ذَلِكَ بَيْتٌ كَبِيْرٌ", deskripsi: "Kata tunjuk jarak jauh untuk laki-laki/mudzakkar." },
@@ -214,9 +198,7 @@
         ]
       },
       9: {
-        title: "Transportasi",
-        titleAr: "المُوَاصَلَاتُ",
-        data: [
+        title: "Transportasi", titleAr: "المُوَاصَلَاتُ", data: [
           { id: 1, arab: "سَيَّارَةٌ", latin: "Sayyaaratu", arti: "Mobil", contoh: "أَبِي يَقُوْدُ السَّيَّارَةَ", deskripsi: "Kendaraan darat roda empat." },
           { id: 2, arab: "حَافِلَةٌ", latin: "Haafilatu", arti: "Bus", contoh: "أَذْهَبُ إِلَى الْمَدْرَسَةِ بِالْحَافِلَةِ", deskripsi: "Kendaraan umum besar." },
           { id: 3, arab: "دَرَّاجَةٌ", latin: "Darraajatu", arti: "Sepeda", contoh: "أَرْكَبُ الدَّرَّاجَةَ كُلَّ صَبَاحٍ", deskripsi: "Kendaraan roda dua." },
@@ -230,9 +212,7 @@
         ]
       },
       10: {
-        title: "Kata Sifat",
-        titleAr: "الصِّفَاتُ",
-        data: [
+        title: "Kata Sifat", titleAr: "الصِّفَاتُ", data: [
           { id: 1, arab: "كَبِيْرٌ", latin: "Kabiirun", arti: "Besar", contoh: "هَذَا بَيْتٌ كَبِيْرٌ", deskripsi: "Ukuran yang luas atau agung." },
           { id: 2, arab: "صَغِيْرٌ", latin: "Shaghiirun", arti: "Kecil", contoh: "هَذَا قَلَمٌ صَغِيْرٌ", deskripsi: "Ukuran yang mini atau tidak besar." },
           { id: 3, arab: "طَوِيْلٌ", latin: "Thawiilun", arti: "Panjang/Tinggi", contoh: "الرَّجُلُ طَوِيْلٌ جِدًّا", deskripsi: "Ukuran dimensi memanjang atau tinggi." },
@@ -246,14 +226,12 @@
         ]
       },
       11: {
-        title: "Tempat",
-        titleAr: "الأَمَاكِنُ",
-        data: [
+        title: "Tempat", titleAr: "الأَمَاكِنُ", data: [
           { id: 1, arab: "مَدْرَسَةٌ", latin: "Madrasatun", arti: "Sekolah", contoh: "أَذْهَبُ إِلَى الْمَدْرَسَةِ", deskripsi: "Tempat menuntut ilmu secara formal." },
           { id: 2, arab: "مُسْتَشْفَى", latin: "Mustasyfa", arti: "Rumah Sakit", contoh: "الْمَرِيْضُ فِي الْمُسْتَشْفَى", deskripsi: "Tempat merawat orang yang sakit." },
           { id: 3, arab: "سُوْقٌ", latin: "Suuqun", arti: "Pasar", contoh: "أُمِّي تَشْتَرِي فِي السُّوْقِ", deskripsi: "Tempat transaksi jual beli barang." },
           { id: 4, arab: "مَسْجِدٌ", latin: "Masjidun", arti: "Masjid", contoh: "نُصَلِّي فِي الْمَسْجِدِ", deskripsi: "Rumah ibadah bagi umat Muslim." },
-          { id: 5, arab: "بَيْتٌ", latin: "Baitun", arti: "Rumah", contoh: "هَذَا بَيْتِي الْجَمِيْلُ", deskripsi: "Tempat tinggal dan berteduh." },
+          { id: 5, arab: "بَيْتٌ", latin: "Baitun", arti: "Rumah", contoh: "هَذَا bَيْتِي الْجَمِيْلُ", deskripsi: "Tempat tinggal dan berteduh." },
           { id: 6, arab: "مَكْتَبَةٌ", latin: "Maktabatun", arti: "Perpustakaan", contoh: "أَقْرَأُ الْكِتَابَ فِي الْمَكْتَبَةِ", deskripsi: "Tempat koleksi berbagai macam buku." },
           { id: 7, arab: "فَصْلٌ", latin: "Fashlun", arti: "Kelas", contoh: "أَدْخُلُ الْفَصْلَ لِلدِّرَاسَةِ", deskripsi: "Ruangan tempat belajar di sekolah." },
           { id: 8, arab: "حَدِيْقَةٌ", latin: "Hadiiqatun", arti: "Taman", contoh: "أَلْعَبُ فِي الْحَدِيْقَةِ", deskripsi: "Tempat terbuka yang asri untuk bermain." },
@@ -262,9 +240,7 @@
         ]
       },
       12: {
-        title: "Aktivitas Harian",
-        titleAr: "الأَفْعَالُ اليَوْمِيَّةُ",
-        data: [
+        title: "Aktivitas Harian", titleAr: "الأَفْعَالُ اليَوْمِيَّةُ", data: [
           { id: 1, arab: "قَرَأَ", latin: "Qara-a", arti: "Membaca", contoh: "أَنَا أَقْرَأُ الْقُرْآنَ", deskripsi: "Kegiatan melihat dan memahami isi tulisan." },
           { id: 2, arab: "كَتَبَ", latin: "Kataba", arti: "Menulis", contoh: "أَكْتُبُ الدَّرْسَ فِي الدَّفْتَرِ", deskripsi: "Kegiatan membuat huruf dengan pena." },
           { id: 3, arab: "أَكَلَ", latin: "Akala", arti: "Makan", contoh: "أَكَلْتُ الأَرُزَّ فِي الصَّبَاحِ", deskripsi: "Kegiatan memasukkan makanan ke mulut." },
@@ -278,9 +254,7 @@
         ]
       },
       13: {
-        title: "Pakaian",
-        titleAr: "المَلَابِسُ",
-        data: [
+        title: "Pakaian", titleAr: "المَلَابِسُ", data: [
           { id: 1, arab: "قَمِيْصٌ", latin: "Qamiishun", arti: "Kemeja", contoh: "هَذَا قَمِيْصٌ نَظِيْفٌ", deskripsi: "Pakaian atasan berkerah." },
           { id: 2, arab: "سِرْوَالٌ", latin: "Sirwaalun", arti: "Celana", contoh: "أَلْبَسُ السِّرْوَالَ الأَسْوَدَ", deskripsi: "Pakaian penutup bagian kaki." },
           { id: 3, arab: "خِمَارٌ", latin: "Khimaarun", arti: "Kerudung", contoh: "هَذَا خِمَارٌ جَمِيْلٌ", deskripsi: "Kain penutup kepala bagi wanita." },
@@ -294,9 +268,7 @@
         ]
       },
       14: {
-        title: "Hobi",
-        titleAr: "الهِوَايَاتُ",
-        data: [
+        title: "Hobi", titleAr: "الهِوَايَاتُ", data: [
           { id: 1, arab: "سِبَاحَةٌ", latin: "Sibaahatun", arti: "Berenang", contoh: "أَنَا أُحِبُّ السِّبَاحَةَ", deskripsi: "Olahraga bergerak di dalam air." },
           { id: 2, arab: "رَسْمٌ", latin: "Rasmun", arti: "Melukis/Menggambar", contoh: "الرَّسْمُ هِوَايَتِي الْمُفَضَّلَةُ", deskripsi: "Seni membuat gambar di atas kertas." },
           { id: 3, arab: "قِرَاءَةٌ", latin: "Qiraa-atun", arti: "Membaca", contoh: "الْقِرَاءَةُ غِذَاءُ الْعَقْلِ", deskripsi: "Kegiatan memahami isi buku atau tulisan." },
@@ -310,9 +282,7 @@
         ]
       },
       15: {
-        title: "Alam & Cuaca",
-        titleAr: "الطَّبِيعَةُ وَالمَنَاخُ",
-        data: [
+        title: "Alam & Cuaca", titleAr: "الطَّبِيعَةُ وَالمَنَاخُ", data: [
           { id: 1, arab: "شَمْسٌ", latin: "Syamsun", arti: "Matahari", contoh: "الشَّمْسُ تُشْرِقُ صَبَاحًا", deskripsi: "Bintang pusat tata surya." },
           { id: 2, arab: "قَمَرٌ", latin: "Qamarun", arti: "Bulan", contoh: "الْقَمَرُ يَنْظُرُ فِي اللَّيْلِ", deskripsi: "Satelit alami bumi." },
           { id: 3, arab: "نَجْمٌ", latin: "Najmun", arti: "Bintang", contoh: "النُّجُوْمُ كَثِيْرَةٌ فِي السَّمَاءِ", deskripsi: "Benda langit yang bercahaya." },
@@ -326,9 +296,7 @@
         ]
       },
       16: {
-        title: "Peralatan Makan",
-        titleAr: "أَدَوَاتُ الأَكْلِ",
-        data: [
+        title: "Peralatan Makan", titleAr: "أَدَوَاتُ الأَكْلِ", data: [
           { id: 1, arab: "صَحْنٌ", latin: "Sahnun", arti: "Piring", contoh: "أَضَعُ الطَّعَامَ فِي الصَّحْنِ", deskripsi: "Wadah datar untuk makanan." },
           { id: 2, arab: "مِلْعَقَةٌ", latin: "Mil'aqatun", arti: "Sendok", contoh: "آكُلُ الأَرُزَّ بِالْمِلْعَقَةِ", deskripsi: "Alat untuk menyuap makanan." },
           { id: 3, arab: "شَوْكَةٌ", latin: "Syaukatun", arti: "Garpu", contoh: "أَسْتَعْمِلُ الشَّوْكَةَ لِلْمَكَرُوْنَةِ", deskripsi: "Alat makan yang ujungnya tajam." },
@@ -342,9 +310,7 @@
         ]
       },
       17: {
-        title: "Waktu & Masa",
-        titleAr: "الأَوْقَاتُ",
-        data: [
+        title: "Waktu & Masa", titleAr: "الأَوْقَاتُ", data: [
           { id: 1, arab: "صَبَاحٌ", latin: "Shabaahun", arti: "Pagi", contoh: "أَذْهَبُ إِلَى الْمَدْرَسَةِ صَبَاحًا", deskripsi: "Waktu ketika matahari terbit." },
           { id: 2, arab: "مَسَاءٌ", latin: "Masaa-un", arti: "Sore", contoh: "أَلْعَبُ مَعَ أَصْدِقَائِي مَسَاءً", deskripsi: "Waktu menjelang matahari terbenam." },
           { id: 3, arab: "لَيْلٌ", latin: "Lailun", arti: "Malam", contoh: "أَنَا أَنَامُ فِي اللَّيْلِ", deskripsi: "Waktu gelap setelah matahari terbenam." },
@@ -358,9 +324,7 @@
         ]
       },
       18: {
-        title: "Peralatan Kamar Mandi",
-        titleAr: "أَدَوَاتُ الحَمَّامِ",
-        data: [
+        title: "Peralatan Kamar Mandi", titleAr: "أَدَوَاتُ الحَمَّامِ", data: [
           { id: 1, arab: "صَابُوْنٌ", latin: "Shaabuun", arti: "Sabun", contoh: "أَسْتَعْمِلُ الصَّابُوْنَ لِلْغُسْلِ", deskripsi: "Alat pembersih tubuh saat mandi." },
           { id: 2, arab: "مِنْشَفَةٌ", latin: "Minsyafah", arti: "Handuk", contoh: "هَذِهِ مِنْشَفَةٌ نَاشِفَةٌ", deskripsi: "Kain untuk mengeringkan badan." },
           { id: 3, arab: "فُرْشَاةُ الأَسْنَانِ", latin: "Fursyatul Asnan", arti: "Sikat Gigi", contoh: "أُنَظِّفُ أَسْنَانِي بِالْفُرْشَاةِ", deskripsi: "Alat untuk membersihkan gigi." },
@@ -374,9 +338,7 @@
         ]
       },
       19: {
-        title: "Arah & Lokasi",
-        titleAr: "الجِهَاتُ",
-        data: [
+        title: "Arah & Lokasi", titleAr: "الجِهَاتُ", data: [
           { id: 1, arab: "أَمَامَ", latin: "Amaama", arti: "Di depan", contoh: "الأُسْتَاذُ أَمَامَ الْفَصْلِ", deskripsi: "Posisi berada di bagian muka." },
           { id: 2, arab: "وَرَاءَ", latin: "Waraa-a", arti: "Di belakang", contoh: "الْمَقْعَدُ وَرَاءَ الْمَكْتَبِ", deskripsi: "Posisi berada di bagian punggung." },
           { id: 3, arab: "فَوْقَ", latin: "Fauqa", arti: "Di atas (tidak menempel)", contoh: "الطَّائِرُ فَوْقَ الشَّجَرَةِ", deskripsi: "Posisi berada di tempat yang lebih tinggi." },
@@ -390,9 +352,7 @@
         ]
       },
       20: {
-        title: "Kata Tanya",
-        titleAr: "أَسْمَاءُ الِاسْتِفْهَامِ",
-        data: [
+        title: "Kata Tanya", titleAr: "أَسْمَاءُ الِاسْتِفْهَامِ", data: [
           { id: 1, arab: "مَنْ", latin: "Man", arti: "Siapa", contoh: "مَنْ هَذَا؟", deskripsi: "Kata tanya untuk menanyakan orang." },
           { id: 2, arab: "مَا", latin: "Ma", arti: "Apa", contoh: "مَا هَذَا؟", deskripsi: "Kata tanya untuk menanyakan benda/hal." },
           { id: 3, arab: "كَيْفَ", latin: "Kaifa", arti: "Bagaimana", contoh: "كَيْفَ حَالُكَ؟", deskripsi: "Kata tanya untuk menanyakan keadaan/cara." },
@@ -406,14 +366,12 @@
         ]
       },
       21: {
-        title: "Kata Ganti",
-        titleAr: "الضَّمَائِرُ",
-        data: [
+        title: "Kata Ganti", titleAr: "الضَّمَائِرُ", data: [
           { id: 1, arab: "أَنَا", latin: "Ana", arti: "Saya", contoh: "أَنَا طَالِبٌ", deskripsi: "Kata ganti orang pertama tunggal." },
           { id: 2, arab: "نَحْنُ", latin: "Nahnu", arti: "Kami/Kita", contoh: "نَحْنُ مُسْلِمُوْنَ", deskripsi: "Kata ganti orang pertama jamak." },
           { id: 3, arab: "أَنْتَ", latin: "Anta", arti: "Kamu (L)", contoh: "أَنْتَ طَبِيْبٌ", deskripsi: "Kata ganti orang kedua laki-laki tunggal." },
           { id: 4, arab: "أَنْتِ", latin: "Anti", arti: "Kamu (P)", contoh: "أَنْتِ مُدَرِّسَةٌ", deskripsi: "Kata ganti orang kedua perempuan tunggal." },
-          { id: 5, arab: "أَنْتُمْ", latin: "Antum", arti: "Kalian (L)", contoh: "أَنْتُمْ مُجْتَهِدُوْنَ", deskripsi: "Kata ganti orang kedua laki-laki jamak." },
+          { id: 5, arab: "أَنْتُمْ", latin: "Antum", arti: "Kalian (L)", contoh: "أَنْتُمْ مُجْتَهِدُوْنَ", deskripsi: "Kata ganti orang second laki-laki jamak." },
           { id: 6, arab: "أَنْتُنَّ", latin: "Antunna", arti: "Kalian (P)", contoh: "أَنْتُنَّ صَالِحَاتٌ", deskripsi: "Kata ganti orang kedua perempuan jamak." },
           { id: 7, arab: "هُوَ", latin: "Huwa", arti: "Dia (L)", contoh: "هُوَ أُسْتَاذٌ", deskripsi: "Kata ganti orang ketiga laki-laki tunggal." },
           { id: 8, arab: "هِيَ", latin: "Hiya", arti: "Dia (P)", contoh: "هِيَ أُمِّي", deskripsi: "Kata ganti orang ketiga perempuan tunggal." },
@@ -422,9 +380,7 @@
         ]
       },
       22: {
-        title: "Sayur-sayuran",
-        titleAr: "الخُضْرَوَاتُ",
-        data: [
+        title: "Sayur-sayuran", titleAr: "الخُضْرَوَاتُ", data: [
           { id: 1, arab: "بَصَلٌ", latin: "Bashalun", arti: "Bawang Merah", contoh: "أُمِّي تَقْطَعُ الْبَصَلَ", deskripsi: "Bumbu dapur yang membuat mata perih saat dipotong." },
           { id: 2, arab: "ثُوْمٌ", latin: "Tsuumun", arti: "Bawang Putih", contoh: "الثُّوْمُ مُفِيْدٌ لِلصِّحَّةِ", deskripsi: "Bumbu dapur berwarna putih dengan bau khas." },
           { id: 3, arab: "جَزَرٌ", latin: "Jazarun", arti: "Wortel", contoh: "الأَرْنَبُ يَأْكُلُ الْجَزَرَ", deskripsi: "Sayuran berwarna oranye yang baik untuk mata." },
@@ -438,10 +394,8 @@
         ]
       },
       23: {
-        title: "Bentuk & Ruang",
-        titleAr: "الأَشْكَالُ",
-        data: [
-          { id: 1, arab: "دَائِرَةٌ", latin: "Daa-iratun", arti: "Lingkaran", contoh: "الشَّمْسُ شَكْلُهَا دَائِرَةٌ", deskripsi: "Bentuk bulat bundar seperti bola atau roda." },
+        title: "Bentuk & Ruang", titleAr: "الأَشْكَالُ", data: [
+          { id: 1, arab: "دَائِرَةٌ", latin: "Daa-iratun", arti: "Lingkaran", contoh: "الشَّمْسُ شَكْلُهَا دَائِرَةٌ", deskripsi: "Bentuk bulat bundar gross seperti bola atau roda." },
           { id: 2, arab: "مُثَلَّثٌ", latin: "Mutsallatsun", arti: "Segitiga", contoh: "رَسَمْتُ مُثَلَّثًا جَمِيْلًا", deskripsi: "Bentuk datar yang memiliki tiga sudut dan sisi." },
           { id: 3, arab: "مُرَبَّعٌ", latin: "Murabba'un", arti: "Persegi", contoh: "الْكَعْبَةُ شَكْلُهَا مُرَبَّعٌ", deskripsi: "Bentuk datar dengan empat sisi yang sama panjang." },
           { id: 4, arab: "مُسْتَطِيْلٌ", latin: "Mustathiilun", arti: "Persegi Panjang", contoh: "الْبَابُ شَكْلُهُ مُسْتَطِيْلٌ", deskripsi: "Bentuk dengan dua sisi panjang dan dua sisi pendek." },
@@ -454,9 +408,7 @@
         ]
       },
       24: {
-        title: "Peralatan Dapur",
-        titleAr: "أَدَوَاتُ المَطْبَخِ",
-        data: [
+        title: "Peralatan Dapur", titleAr: "أَدَوَاتُ المَطْبَخِ", data: [
           { id: 1, arab: "إِبْرِيْقٌ", latin: "Ibriiqun", arti: "Teko", contoh: "أَصُبُّ الْمَاءَ مِنَ الْإِبْرِيْقِ", deskripsi: "Wadah untuk menyimpan dan menuang air minum." },
           { id: 2, arab: "صِيْنِيَّةٌ", latin: "Shiiniyyatun", arti: "Nampan", contoh: "أَحْمِلُ الْأَكْوَابَ بِالصِّيْنِيَّةِ", deskripsi: "Wadah datar lebar untuk membawa makanan/minuman." },
           { id: 3, arab: "مَوْقِدٌ", latin: "Mauqidun", arti: "Kompor", contoh: "أُمِّي تَطْبَخُ عَلَى الْمَوْقِدِ", deskripsi: "Alat untuk memanaskan dan memasak makanan." },
@@ -470,9 +422,7 @@
         ]
       },
       25: {
-        title: "Bagian Rumah",
-        titleAr: "أَجْزَاءُ البَيْتِ",
-        data: [
+        title: "Bagian Rumah", titleAr: "أَجْزَاءُ البَيْتِ", data: [
           { id: 1, arab: "جِدَارٌ", latin: "Jidaarun", arti: "Dinding", contoh: "الْجِدَارُ لَوْنُهُ أَبْيَضُ", deskripsi: "Tembok penyekat ruangan di dalam rumah." },
           { id: 2, arab: "سَقْفٌ", latin: "Saqfun", arti: "Atap", contoh: "السَّقْفُ عَالٍ جِدًّا", deskripsi: "Bagian penutup atas suatu bangunan." },
           { id: 3, arab: "أَرْضِيَّةٌ", latin: "Ardhiyyatun", arti: "Lantai", contoh: "أُنَظِّفُ الْأَرْضِيَّةَ كُلَّ يَوْمٍ", deskripsi: "Bagian dasar ruangan tempat kita berpijak." },
@@ -486,9 +436,7 @@
         ]
       },
       26: {
-        title: "Kesehatan & Penyakit",
-        titleAr: "الصِّحَّةُ وَالمَرَضُ",
-        data: [
+        title: "Kesehatan & Penyakit", titleAr: "الصِّحَّةُ وَالمَرَضُ", data: [
           { id: 1, arab: "دَوَاءٌ", latin: "Dawaa-un", arti: "Obat", contoh: "أَشْرَبُ الدَّوَاءَ لِأَشْفَى", deskripsi: "Sesuatu yang diminum agar sembuh dari sakit." },
           { id: 2, arab: "صُدَاعٌ", latin: "Shudaa'un", arti: "Sakit Kepala", contoh: "أَشْعُرُ بِصُدَاعٍ شَدِيْدٍ", deskripsi: "Rasa sakit atau pening di bagian kepala." },
           { id: 3, arab: "حُمَّى", latin: "Hummaa", arti: "Demam", contoh: "أَصَابَتْهُ حُمَّى مُرْتَفِعَةٌ", deskripsi: "Kondisi suhu badan yang panas." },
@@ -502,9 +450,7 @@
         ]
       },
       27: {
-        title: "Alat Kebersihan",
-        titleAr: "أَدَوَاتُ النَّظَافَةِ",
-        data: [
+        title: "Alat Kebersihan", titleAr: "أَدَوَاتُ النَّظَافَةِ", data: [
           { id: 1, arab: "مِكْنَسَةٌ", latin: "Miknasatun", arti: "Sapu", contoh: "أَكْنُسُ الْغُرْفَةَ بِالْمِكْنَسَةِ", deskripsi: "Alat untuk membersihkan lantai dari debu." },
           { id: 2, arab: "مَزْبَلَةٌ", latin: "Mazbalatun", arti: "Tempat Sampah", contoh: "أَرْمِي الْقُمَامَةَ فِي الْمَزْبَلَةِ", deskripsi: "Wadah untuk membuang kotoran." },
           { id: 3, arab: "مِنْفَضَةٌ", latin: "Minfadhatun", arti: "Kemoceng", contoh: "أُنَظِّفُ الْمَكْتَبَ بِالْمِنْفَضَةِ", deskripsi: "Alat pembersih debu yang terbuat dari bulu." },
@@ -518,9 +464,7 @@
         ]
       },
       28: {
-        title: "Alat Pertukangan",
-        titleAr: "أَدَوَاتُ العَمَلِ",
-        data: [
+        title: "Alat Pertukangan", titleAr: "أَدَوَاتُ العَمَلِ", data: [
           { id: 1, arab: "مِطْرَقَةٌ", latin: "Mithraqatun", arti: "Palu", contoh: "أَضْرِبُ الْمِسْمَارَ بِالْمِطْرَقَةِ", deskripsi: "Alat untuk memukul paku." },
           { id: 2, arab: "مِسْمَارٌ", latin: "Mismaarun", arti: "Paku", contoh: "الْمِسْمَارُ فِي الْجِدَارِ", deskripsi: "Benda tajam dari besi untuk menyambung kayu." },
           { id: 3, arab: "مِنْشَارٌ", latin: "Minsyaarun", arti: "Gergaji", contoh: "أَقْطَعُ الْخَشَبَ بِالْمِنْشَارِ", deskripsi: "Alat bergerigi tajam untuk memotong kayu." },
@@ -534,9 +478,7 @@
         ]
       },
       29: {
-        title: "Serangga",
-        titleAr: "الحَشَرَاتُ",
-        data: [
+        title: "Serangga", titleAr: "الحَشَرَاتُ", data: [
           { id: 1, arab: "نَمْلَةٌ", latin: "Namlatun", arti: "Semut", contoh: "النَّمْلَةُ حَشَرَةٌ نَشِيْطَةٌ", deskripsi: "Serangga kecil yang hidup bergotong-royong." },
           { id: 2, arab: "بَعُوْضَةٌ", latin: "Ba'uudhatun", arti: "Nyamuk", contoh: "الْبَعُوْضَةُ تَلْدَغُ فِي اللَّيْلِ", deskripsi: "Serangga kecil berdengung yang suka menghisap darah." },
           { id: 3, arab: "ذُبَابَةٌ", latin: "Dzubaabatun", arti: "Lalat", contoh: "الذُّبَابَةُ تَقِفُ عَلَى الطَّعَامِ", deskripsi: "Serangga terbang yang menyukai tempat kotor." },
@@ -550,9 +492,7 @@
         ]
       },
       30: {
-        title: "Hewan",
-        titleAr: "الحَيَوَانَاتُ",
-        data: [
+        title: "Hewan", titleAr: "الحَيَوَانَاتُ", data: [
           { id: 1, arab: "أَسَدٌ", latin: "Asadun", arti: "Singa", contoh: "الأَسَدُ مَلِكُ الْغَابَةِ", deskripsi: "Hewan buas pemakan daging." },
           { id: 2, arab: "فِيْلٌ", latin: "Fiilun", arti: "Gajah", contoh: "الْفِيْلُ حَيَوَانٌ كَبِيْرٌ", deskripsi: "Hewan besar belalai panjang." },
           { id: 3, arab: "قِطٌّ", latin: "Qittun", arti: "Kucing", contoh: "عِنْدِي قِطٌّ جَمِيْلٌ", deskripsi: "Hewan piaraan yang lucu." },
@@ -594,42 +534,62 @@
       const [isRecording, setIsRecording] = useState(false);
       const [audioUrl, setAudioUrl] = useState(null);
       const [audioBase64, setAudioBase64] = useState("");
+      const [isAudioSent, setIsAudioSent] = useState(false);
       const mediaRecorderRef = useRef(null);
       const audioChunksRef = useRef([]);
 
       const currentMufrodatList = MUFRODAT_DB[selectedDay].data;
 
-      // Ambil daftar suara perangkat saat aplikasi dimuat
       useEffect(() => {
-        const fetchVoices = () => {
-          setAvailableVoices(window.speechSynthesis.getVoices());
-        };
+        const fetchVoices = () => setAvailableVoices(window.speechSynthesis.getVoices());
         if ('speechSynthesis' in window) {
           fetchVoices();
           window.speechSynthesis.onvoiceschanged = fetchVoices;
         }
       }, []);
 
-      // FUNGSI REKAMAN HAFALAN
       const startRecording = async () => {
         try {
+          if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            alert("Maaf, browser Anda tidak mendukung fitur rekam suara. Pastikan membuka web ini melalui Google Chrome/Safari versi terbaru (HTTPS) bukan dari WhatsApp.");
+            return;
+          }
+
           const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-          const mediaRecorder = new MediaRecorder(stream);
+          
+          let options = {};
+          if (typeof MediaRecorder !== 'undefined' && typeof MediaRecorder.isTypeSupported === 'function') {
+            if (MediaRecorder.isTypeSupported('audio/webm')) {
+              options = { mimeType: 'audio/webm' };
+            } else if (MediaRecorder.isTypeSupported('audio/mp4')) {
+              options = { mimeType: 'audio/mp4' };
+            } else if (MediaRecorder.isTypeSupported('audio/aac')) {
+              options = { mimeType: 'audio/aac' };
+            }
+          }
+
+          let mediaRecorder;
+          try {
+            mediaRecorder = new MediaRecorder(stream, options);
+          } catch (e) {
+            mediaRecorder = new MediaRecorder(stream);
+          }
+
           mediaRecorderRef.current = mediaRecorder;
           audioChunksRef.current = [];
 
           mediaRecorder.ondataavailable = (event) => {
-            if (event.data.size > 0) {
+            if (event.data && event.data.size > 0) {
               audioChunksRef.current.push(event.data);
             }
           };
 
           mediaRecorder.onstop = () => {
-            const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
+            const actualMimeType = mediaRecorder.mimeType || 'audio/mp4';
+            const audioBlob = new Blob(audioChunksRef.current, { type: actualMimeType });
             const url = URL.createObjectURL(audioBlob);
             setAudioUrl(url);
             
-            // Konversi ke base64 agar bisa dikirim ke server
             const reader = new FileReader();
             reader.readAsDataURL(audioBlob);
             reader.onloadend = () => {
@@ -644,7 +604,11 @@
           setIsRecording(true);
         } catch (err) {
           console.error("Gagal mengakses mikrofon:", err);
-          alert("Tolong izinkan akses mikrofon browser kamu untuk mulai merekam hafalan.");
+          if (err.name === 'NotAllowedError' || err.name === 'PermissionDeniedError') {
+              alert("Akses mikrofon ditolak!\n\nMohon izinkan akses mikrofon di pengaturan browser Anda (ketuk ikon gembok 🔒 di samping link web untuk mengubah izin).");
+          } else {
+              alert("Gagal merekam.\n\nPastikan link dibuka di Safari (untuk iPhone) atau Chrome (untuk Android), BUKAN dari browser bawaan WhatsApp.");
+          }
         }
       };
 
@@ -658,15 +622,14 @@
       const deleteRecording = () => {
         setAudioUrl(null);
         setAudioBase64("");
+        setIsAudioSent(false);
         audioChunksRef.current = [];
       };
 
-      // Reset recording when changing days
       useEffect(() => {
         deleteRecording();
       }, [selectedDay]);
 
-      // FUNGSI AUDIO / SUARA NATIVE ARAB FUSHA (PEREMPUAN)
       const playAudio = (text) => {
         try {
           const clearText = text + " .";
@@ -709,7 +672,6 @@
         }
       };
 
-      // Auth Initialization
       useEffect(() => {
         if(!auth) return;
         const initAuth = async () => {
@@ -732,7 +694,6 @@
         return () => unsubscribe();
       }, []);
 
-      // Fetch History
       useEffect(() => {
         if (!isLoggedIn || !participantName) return;
 
@@ -761,7 +722,6 @@
         }
       }, [user, isLoggedIn, participantName, db]);
 
-      // Logic to scramble letters
       useEffect(() => {
         if (quizStep === 1 && currentQuestion % 2 !== 0) {
           const target = currentMufrodatList[currentQuestion].arab;
@@ -799,8 +759,7 @@
         }
       };
 
-      // FUNGSI MENGIRIM DATA KE GOOGLE SCRIPT MENGGUNAKAN TEKS JSON AGAR MUAT BASE64 BESAR
-      const sendToGoogleSheet = async (name, scoreValue, category, audioData, day) => {
+      const sendToGoogleSheet = async (name, scoreValue, category, audioData, day, type) => {
         if (!GOOGLE_SCRIPT_URL) {
           console.warn("GOOGLE_SCRIPT_URL kosong, data tidak dikirim ke Google Sheets.");
           return;
@@ -812,26 +771,44 @@
           materi: category, 
           day: day,
           waktu: new Date().toLocaleString('id-ID'),
-          audio: audioData || "" 
+          audio: audioData || "",
+          tipe: type || "Kuis"
         };
         
         try {
-          await fetch(GOOGLE_SCRIPT_URL, {
+          const res = await fetch(GOOGLE_SCRIPT_URL, {
             method: 'POST',
             body: JSON.stringify(payload),
             headers: {
               'Content-Type': 'text/plain;charset=utf-8',
             }
           });
+          if (!res.ok) throw new Error("Gagal network");
         } catch (err) {
           console.error("Gagal mengirim ke Google Sheet:", err);
+          throw err;
         }
       };
 
-      // FUNGSI SUBMIT KUIS
-      const submitQuiz = async (latestRawScore) => {
-        const finalScore = Math.round((latestRawScore / 10) * 100); 
-        const category = `Hari ${selectedDay}: ${MUFRODAT_DB[selectedDay].title}`;
+      const submitHafalan = async () => {
+        if (isProcessing) return;
+        setIsProcessing(true);
+        try {
+          const category = `Hafalan Hari ${selectedDay}: ${MUFRODAT_DB[selectedDay].title}`;
+          await sendToGoogleSheet(participantName, "-", category, audioBase64, selectedDay, "Hafalan");
+          setIsAudioSent(true);
+        } catch (error) {
+          alert("Gagal mengirim rekaman ke server. Pastikan koneksi internet lancar lalu coba lagi.");
+        } finally {
+          setIsProcessing(false);
+        }
+      };
+
+      const submitQuiz = async () => {
+        if (isProcessing) return;
+        setIsProcessing(true);
+        const finalScore = Math.round((score / 10) * 100); 
+        const category = `Kuis Hari ${selectedDay}: ${MUFRODAT_DB[selectedDay].title}`;
         
         try {
           const localHistoryKey = `alfal_history_${participantName}`;
@@ -858,17 +835,21 @@
             });
           }
           
-          // Mengirimkan rekaman audioBase64 ke server
-          await sendToGoogleSheet(participantName, finalScore, category, audioBase64, selectedDay);
+          try {
+            await sendToGoogleSheet(participantName, finalScore, category, "", selectedDay, "Kuis");
+          } catch(e) {
+            console.warn("Gagal simpan ke Sheet.");
+          }
           
-          setQuizStep(2); 
+          setQuizStep(3); 
         } catch (err) {
           alert("Gagal menyimpan nilai.");
           console.error(err);
+        } finally {
+          setIsProcessing(false);
         }
       };
 
-      // FUNGSI JAWAB PILIHAN GANDA 
       const handleChoiceAnswer = (isCorrect) => {
         if (isProcessing) return;
         setIsProcessing(true);
@@ -880,17 +861,16 @@
         }
         
         setTimeout(() => {
-          moveToNext(newScore);
+          moveToNext();
           setIsProcessing(false);
         }, 150);
       };
 
-      // FUNGSI BERPINDAH SOAL
-      const moveToNext = (latestScore) => {
+      const moveToNext = () => {
         if (currentQuestion < 9) {
           setCurrentQuestion(q => q + 1);
         } else {
-          submitQuiz(latestScore);
+          setQuizStep(2);
         }
       };
 
@@ -904,7 +884,6 @@
         setCurrentGuess(currentGuess.filter(l => l.id !== letterObj.id));
       };
 
-      // FUNGSI JAWAB SUSUN HURUF
       const checkScrambleAnswer = () => {
         if (isProcessing) return;
         setIsProcessing(true);
@@ -919,7 +898,7 @@
         }
         
         setTimeout(() => {
-          moveToNext(newScore);
+          moveToNext();
           setIsProcessing(false);
         }, 150);
       };
@@ -1183,7 +1162,7 @@
                     </p>
                   </div>
                   <button 
-                    onClick={() => setActiveTab('rekam')} 
+                    onClick={() => {setActiveTab('rekam'); window.scrollTo(0,0);}} 
                     className="w-full sm:w-auto bg-emerald-600 text-white px-6 py-3 md:py-2 rounded-xl font-black text-sm shadow-lg hover:bg-emerald-700 transition-all active:scale-95 text-center flex justify-center items-center gap-2"
                   >
                     <Mic size={18}/> Setor Hafalan
@@ -1246,26 +1225,34 @@
                         {isRecording ? <Square size={32} className="md:w-10 md:h-10" /> : <Mic size={40} className="md:w-12 md:h-12" />}
                       </button>
                       <p className="text-sm md:text-base font-bold text-slate-400">
-                        {isRecording ? "Sedang merekam... Tekan kotak untuk berhenti." : "Tekan ikon Mikrofon untuk mulai"}
+                        {isRecording ? "Sedang merekam... Tekan kotak untuk berhenti." : "Tekan ikon Mikrofon untuk mulai merekam"}
                       </p>
                     </div>
                   ) : (
                     <div className="flex flex-col items-center justify-center gap-6 w-full animate-in zoom-in-95">
-                      <audio src={audioUrl} controls className="w-full max-w-sm rounded-xl" />
-                      <div className="flex gap-4 w-full max-w-sm mt-4">
-                         <button 
-                           onClick={deleteRecording} 
-                           className="flex-1 py-3 md:py-4 bg-red-50 text-red-500 rounded-xl md:rounded-2xl font-black hover:bg-red-100 transition-colors flex items-center justify-center gap-2 text-sm md:text-base"
-                         >
-                           <Trash2 size={18} /> Ulangi
-                         </button>
-                         <button 
-                           onClick={() => { setActiveTab('quiz'); setQuizStep(0); setCurrentQuestion(0); setScore(0); }} 
-                           className="flex-[2] py-3 md:py-4 bg-emerald-600 text-white rounded-xl md:rounded-2xl font-black shadow-lg hover:bg-emerald-700 transition-all active:scale-95 text-sm md:text-base"
-                         >
-                           Selesai & Lanjut Kuis
-                         </button>
+                      <div className="bg-slate-50 p-4 rounded-2xl w-full max-w-md border border-slate-200 shadow-sm">
+                         <audio src={audioUrl} controls className="w-full h-12" />
                       </div>
+                      
+                      {!isAudioSent ? (
+                        <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+                           <button onClick={deleteRecording} disabled={isProcessing} className="flex-1 py-3 md:py-4 bg-white border border-slate-200 text-slate-600 rounded-xl md:rounded-2xl font-black hover:bg-red-50 hover:text-red-500 hover:border-red-200 transition-colors flex justify-center items-center gap-2 disabled:opacity-50">
+                             <Trash2 size={18} /> Ulangi
+                           </button>
+                           <button onClick={submitHafalan} disabled={isProcessing} className="flex-[2] py-3 md:py-4 bg-emerald-600 text-white rounded-xl md:rounded-2xl font-black shadow-lg hover:bg-emerald-700 transition-colors flex justify-center items-center gap-2 disabled:opacity-50">
+                             {isProcessing ? "Mengirim..." : "Kirim Rekaman"} <ArrowRight size={18}/>
+                           </button>
+                        </div>
+                      ) : (
+                        <div className="flex flex-col gap-4 w-full max-w-md fade-in-up">
+                           <div className="bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-4 rounded-xl font-bold flex justify-center items-center gap-2 shadow-sm">
+                              <CheckCircle size={24} /> Rekaman Berhasil Dikirim!
+                           </div>
+                           <button onClick={() => { setActiveTab('quiz'); setQuizStep(0); setCurrentQuestion(0); setScore(0); window.scrollTo(0,0); }} className="w-full py-4 bg-slate-900 text-white rounded-xl font-bold shadow-lg hover:bg-emerald-600 transition-colors flex justify-center items-center gap-2 mt-2">
+                             Lanjut ke Kuis <ArrowRight size={18}/>
+                           </button>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
@@ -1274,11 +1261,11 @@
 
             {/* Tab Kuis */}
             {activeTab === 'quiz' && (
-              <div className="max-w-2xl mx-auto">
+              <div className="max-w-2xl mx-auto pb-10">
                 {/* Step 0: Layar Mulai */}
                 {quizStep === 0 && (
                    <div className="bg-white p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] border border-slate-100 shadow-xl md:shadow-2xl text-center animate-in fade-in duration-500">
-                     <div className="w-20 h-20 md:w-24 md:h-24 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8 shadow-inner">
+                     <div className="w-20 h-20 md:w-24 md:h-24 bg-orange-100 text-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8 shadow-inner ring-8 ring-orange-50">
                        <Trophy size={40} className="md:w-[48px] md:h-[48px]" />
                      </div>
                      <h2 className="text-3xl md:text-4xl font-black mb-6 md:mb-8 tracking-tight">Kuis Hari {selectedDay}</h2>
@@ -1299,8 +1286,13 @@
 
                 {/* Step 1: Layar Pertanyaan */}
                 {quizStep === 1 && (
-                   <div className="bg-white p-6 md:p-10 rounded-[2.5rem] md:rounded-[3rem] border border-slate-100 shadow-xl md:shadow-2xl">
-                     <div className="flex justify-between items-center mb-6 md:mb-8 text-slate-400 font-black text-[10px] md:text-xs uppercase tracking-widest">
+                   <div className="bg-white p-6 md:p-10 rounded-[2.5rem] md:rounded-[3rem] border border-slate-100 shadow-xl md:shadow-2xl relative overflow-hidden">
+                     
+                     <div className="absolute top-0 left-0 w-full h-1.5 bg-slate-100">
+                        <div className="h-full bg-emerald-500 transition-all duration-500 ease-out" style={{ width: `${((currentQuestion) / 10) * 100}%` }}></div>
+                     </div>
+
+                     <div className="flex justify-between items-center mb-6 md:mb-8 mt-2 text-slate-400 font-black text-[10px] md:text-xs uppercase tracking-widest">
                        <span>Soal {currentQuestion + 1} / 10</span>
                        <span className="text-emerald-600">
                          {currentQuestion % 2 === 0 ? "Pilihan Ganda" : "Susun Huruf"}
@@ -1309,12 +1301,12 @@
 
                      {currentQuestion % 2 === 0 ? (
                        // Pilihan Ganda
-                       <div className="text-center animate-in fade-in duration-300">
+                       <div className="text-center animate-in fade-in duration-300" key={`mc-${currentQuestion}`}>
                          <p className="text-xs md:text-sm font-black text-slate-400 uppercase mb-3 md:mb-4 tracking-widest">Apa arti kata ini?</p>
                          <h1 className="text-5xl md:text-6xl font-arabic text-emerald-900 mb-8 md:mb-12 drop-shadow-sm leading-normal">
                            {currentMufrodatList[currentQuestion].arab}
                          </h1>
-                         <div className="grid grid-cols-1 gap-3 md:gap-4">
+                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                            {[
                              currentMufrodatList[currentQuestion].arti, 
                              currentMufrodatList[(currentQuestion + 1) % 10]?.arti || "Buku", 
@@ -1334,7 +1326,7 @@
                        </div>
                      ) : (
                        // Permainan Susun Huruf
-                       <div className="text-center animate-in slide-in-from-right-8 duration-300">
+                       <div className="text-center animate-in slide-in-from-right-8 duration-300" key={`sc-${currentQuestion}`}>
                          <p className="text-xs md:text-sm font-black text-slate-400 uppercase mb-3 md:mb-4 tracking-widest">Susun Huruf Untuk Arti:</p>
                          <h2 className="text-2xl md:text-4xl font-black text-emerald-600 mb-8 md:mb-10 tracking-tight">
                            "{currentMufrodatList[currentQuestion].arti}"
@@ -1342,7 +1334,7 @@
                          
                          <div className="flex justify-center flex-wrap gap-2 md:gap-4 mb-8 md:mb-12 min-h-[70px] md:min-h-[90px] p-4 md:p-6 bg-slate-50 rounded-2xl md:rounded-[2rem] border-2 border-dashed border-slate-200" dir="rtl">
                            {currentGuess.length === 0 && (
-                             <span className="text-slate-300 italic self-center text-xs md:text-sm">Klik huruf Arab di bawah...</span>
+                             <span className="text-slate-400 font-medium self-center text-xs md:text-sm">Klik huruf Arab di bawah...</span>
                            )}
                            {currentGuess.map((l, i) => (
                              <button 
@@ -1383,7 +1375,7 @@
                              disabled={scrambledLetters.length > 0 || isProcessing} 
                              className="flex-[2] py-3 md:py-4 bg-emerald-600 text-white rounded-xl md:rounded-2xl font-black shadow-lg disabled:opacity-50 disabled:shadow-none hover:bg-emerald-700 transition-all active:scale-95 text-sm md:text-base"
                            >
-                             Kirim Jawaban
+                             Kunci Jawaban
                            </button>
                          </div>
                        </div>
@@ -1391,8 +1383,26 @@
                    </div>
                 )}
 
-                {/* Step 2: Layar Hasil */}
+                {/* Step 2: Layar "Kirim Kuis" Terpisah */}
                 {quizStep === 2 && (
+                   <div className="bg-white p-10 md:p-14 rounded-[2.5rem] md:rounded-[3rem] border border-slate-100 shadow-xl md:shadow-2xl text-center fade-in-up">
+                     <div className="w-24 h-24 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 ring-8 ring-blue-50">
+                       <Award size={48} />
+                     </div>
+                     <h2 className="text-3xl font-black text-slate-800 mb-4">Kuis Selesai!</h2>
+                     <p className="text-slate-500 mb-8 max-w-md mx-auto">Alhamdulillah, kamu telah menyelesaikan 10 soal kuis. Klik tombol di bawah ini untuk mengirim dan menyimpan nilaimu ke server.</p>
+                     <button 
+                       onClick={submitQuiz} 
+                       disabled={isProcessing}
+                       className="w-full max-w-sm mx-auto bg-emerald-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-emerald-700 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                     >
+                       {isProcessing ? "Menyimpan Data..." : "Kirim Kuis Sekarang"} <ArrowRight size={20}/>
+                     </button>
+                   </div>
+                )}
+
+                {/* Step 3: Result / Barakallahu Fiikum */}
+                {quizStep === 3 && (
                    <div className="bg-white p-8 md:p-16 rounded-[2.5rem] md:rounded-[3.5rem] border border-slate-100 shadow-xl md:shadow-2xl text-center animate-in zoom-in-95">
                      <div className="w-20 h-20 md:w-24 md:h-24 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-5 md:mb-6">
                        <CheckCircle size={48} className="md:w-[60px] md:h-[60px]" />
@@ -1417,7 +1427,7 @@
                          Coba Lagi
                        </button>
                        <button 
-                         onClick={() => setActiveTab('riwayat')} 
+                         onClick={() => {setActiveTab('riwayat'); window.scrollTo(0,0);}} 
                          className="flex-1 py-4 md:py-5 bg-emerald-600 text-white rounded-xl md:rounded-2xl font-black shadow-lg hover:bg-emerald-700 transition-all"
                        >
                          Lihat Riwayat
