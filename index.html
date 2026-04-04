@@ -86,9 +86,9 @@
     // Database Mufrodat Berdasarkan Hari (1-30)
     const MUFRODAT_DB = {
       1: {
-        title: "Isi Rumah & Bangunan", titleAr: "أَثَاثُ المَنْزِلِ", data: [
-          { id: 1, arab: "سَرِيْرٌ", latin: "Sarirun", arti: "Kasur", contoh: "أَنَا أَنَامُ عَلَى السَّرِيْرِ", deskripsi: "Tempat untuk beristirahat dan tidur." },
-          { id: 2, arab: "مِخَدَّةٌ", latin: "Mikhaddatun", arti: "Bantal", contoh: "الْمِخَدَّةُ نَاعِمَةٌ جِدًّا", deskripsi: "Alas kepala saat tidur agar nyaman." },
+        title: "Perabotan Rumah", titleAr: "أَثَاثُ المَنْزِلِ", data: [
+          { id: 1, arab: "سَرِيْرٌ", latin: "Sarirun", arti: "Ranjang", contoh: "أَنَا أَنَامُ عَلَى السَّرِيْرِ", deskripsi: "Tempat untuk beristirahat dan tidur." },
+          { id: 2, arab: "مِخَدَّةٌ", latin: "Mikhaddatun", arti: "Bantal/Guling", contoh: "الْمِخَدَّةُ نَاعِمَةٌ جِدًّا", deskripsi: "Alas kepala saat tidur agar nyaman." },
           { id: 3, arab: "خِزَانَةٌ", latin: "Khizanatun", arti: "Lemari", contoh: "أَضَعُ الْمَلَابِسَ فِي الْخِزَانَةِ", deskripsi: "Tempat menyimpan pakaian atau barang." },
           { id: 4, arab: "مِرْآةٌ", latin: "Mir-atun", arti: "Cermin", contoh: "أَنْظُرُ إِلَى الْمِرْآةِ كُلَّ صَبَاحٍ", deskripsi: "Benda untuk melihat pantulan diri." },
           { id: 5, arab: "سَجَّادَةٌ", latin: "Sajjadatun", arti: "Sajadah", contoh: "أُصَلِّي عَلَى السَّجَّادَةِ", deskripsi: "Alas untuk melaksanakan ibadah shalat." },
@@ -114,7 +114,7 @@
         ]
       },
       3: {
-        title: "Buah & Makanan", titleAr: "المَأْكُولَاتُ وَالفَوَاكِهُ", data: [
+        title: "Makanan & Buah", titleAr: "المَأْكُولَاتُ وَالفَوَاكِهُ", data: [
           { id: 1, arab: "تُفَّاحٌ", latin: "Tuffahun", arti: "Apel", contoh: "آكُلُ التُّفَّاحَةَ الْحَمْرَاءَ", deskripsi: "Buah bulat yang rasanya manis." },
           { id: 2, arab: "مَوْزٌ", latin: "Mauzun", arti: "Pisang", contoh: "الْمَوْزُ لَوْنُهُ أَصْفَرُ", deskripsi: "Buah panjang berwarna kuning." },
           { id: 3, arab: "عِنَبٌ", latin: "Inabun", arti: "Anggur", contoh: "الْعِنَبُ لَذِيْذٌ جِدًّا", deskripsi: "Buah kecil yang tumbuh merambat." },
@@ -1146,20 +1146,35 @@
             {/* Tab Materi */}
             {activeTab === 'materi' && (
               <div className="space-y-4 md:space-y-6 animate-in fade-in duration-500">
-                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-emerald-50 p-5 md:p-6 rounded-[2rem] md:rounded-3xl border border-emerald-100 mb-4 md:mb-6 gap-4">
-                  <div className="flex flex-col items-start gap-1">
-                    <h2 className="text-xs md:text-sm font-black text-emerald-600 uppercase tracking-widest mb-1">Materi Hari {selectedDay}</h2>
-                    <span className="font-arabic font-bold text-3xl md:text-4xl text-emerald-900" dir="rtl">{MUFRODAT_DB[selectedDay].titleAr}</span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 items-center bg-emerald-50 p-5 md:p-6 rounded-[2rem] md:rounded-3xl border border-emerald-100 mb-4 md:mb-6 gap-4">
+                  
+                  {/* Bagian Kiri: Label Hari */}
+                  <div className="flex justify-start sm:self-start">
+                    <h2 className="text-xs md:text-sm font-black text-emerald-700 uppercase tracking-widest bg-emerald-100/70 px-3 py-1.5 rounded-lg border border-emerald-200">
+                      Materi Hari {selectedDay}
+                    </h2>
+                  </div>
+                  
+                  {/* Bagian Tengah: Judul & Arti Arab */}
+                  <div className="flex flex-col items-center text-center">
+                    <span className="font-arabic font-bold text-4xl md:text-5xl text-emerald-900 mb-2" dir="rtl">
+                      {MUFRODAT_DB[selectedDay].titleAr}
+                    </span>
                     <p className="text-base md:text-lg text-emerald-700 font-bold">
                       {MUFRODAT_DB[selectedDay].title}
                     </p>
                   </div>
-                  <button 
-                    onClick={() => {setActiveTab('rekam'); window.scrollTo(0,0);}} 
-                    className="w-full sm:w-auto bg-emerald-600 text-white px-6 py-3 md:py-2 rounded-xl font-black text-sm shadow-lg hover:bg-emerald-700 transition-all active:scale-95 text-center flex justify-center items-center gap-2"
-                  >
-                    <Mic size={18}/> Setor Hafalan
-                  </button>
+                  
+                  {/* Bagian Kanan: Tombol Setor */}
+                  <div className="flex justify-end sm:self-center mt-2 sm:mt-0">
+                    <button 
+                      onClick={() => {setActiveTab('rekam'); window.scrollTo(0,0);}} 
+                      className="w-full sm:w-auto bg-emerald-600 text-white px-6 py-3.5 md:py-3 rounded-xl font-black text-sm shadow-lg hover:bg-emerald-700 transition-all active:scale-95 text-center flex justify-center items-center gap-2"
+                    >
+                      <Mic size={18}/> Setor Hafalan
+                    </button>
+                  </div>
+
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
